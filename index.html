@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Abdul Malik</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--Breaks inserted to add space between navbar and the first heading-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="images/video/Typing_video_2.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+        <div class="Video_Text">
+            <h1 class="white-text">Hi, I'm Abdul<br><br>Welcome to my portfolio website.</h1>
+            <strong>
+                <p class="center">
+                    <q>
+                        In programming, the hard part isn’t solving problems but deciding what problems to solve.
+                    </q>
+                    <br>
+                    <br> - Paul Graham
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </p>
+            </strong>
+        </div>
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="images/coding_image_1.jpg" alt="imagge of mobile phone screen mail app">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>About Me</h1>
+                <p>
+                    I am software developer based in the South East of England, who is knowledgable and experinced in the following: HTML, CSS and Javascript.
+                    <br>
+                    <br>I am quick learner and confortable with picking up new skills to get the job done.
+                    <br>
+                    <br>Aside from being passionate about coding, in my spare time I enjoy cooking, watching football and listening to music.
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>My GitHub</h1>
+                <p>
+                    You can view my current and past coding projects on my Github profile by click on the link below.
+                    <br>
+                    <p class="center"><a href="https://github.com/shubyone" target="_blank">Abdul Malik Github</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/the-tech-academy" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--Contact section-->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <img src="images/contact_image.jpg"Contact_Image">
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact Me</h1>
+                <!--This specifies where and how to send the form data; we are leaving it blank-->
+                <form action="https://formspree.io/f/mgegbqkb" method="POST"> 
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">&copy Abdul Malik 2024</p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
