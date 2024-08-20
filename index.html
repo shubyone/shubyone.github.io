@@ -1,119 +1,167 @@
 <!DOCTYPE html>
 <html>
-    <!--Head-->
+    
+    <!-- Head -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
         <title>Abdul Malik</title>
-        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+        <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
+        <link rel="stylesheet" type="text/css" href="css/portfolio.css">
     </head>
 
-    <!--Body-->
-    <body class="Background">
-        
-        <!--Navbar-->
+    <!-- Body -->
+    <body class="Background">   
+
+        <!-- Navbar -->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <!-- New section added -->
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <!-- Onclick and ondblclick functions added to open and close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
-        <!--Breaks inserted to add space between navbar and the first heading-->
-        <br>
-        <br>
-
-        <!--Background video-->
+        <!-- Background video -->
         <div id="Home">
             <video autoplay muted loop id="Typing_Video">
-                <source src="images/video/Typing_video_2.mp4" type="video/mp4">
-                <!--Display message if video fails to run-->
+                <source src="images/video/Typing.mp4" type="video/mp4">
+                <!-- Display message if video fails to run -->
                 Your browser does not support HTML5 video.
             </video>
         </div>
 
-        <!--Video text-->
+        <!-- Video text -->
         <div class="Video_Text">
-            <h1 class="white-text">Hi, I'm Abdul<br><br>Welcome to my portfolio website.</h1>
+            <h1 class="white-text">Hi, I'm Abdul</h1>
             <strong>
                 <p class="center">
                     <q>
                         In programming, the hard part isn’t solving problems but deciding what problems to solve.
                     </q>
+                    <br> - Paul Graham<br>
                     <br>
-                    <br> - Paul Graham
-                    <br>
-                    <br>
+                    Welcome to my portfolio website. 
                     <br>
                     <br>
                 </p>
             </strong>
         </div>
 
-        <!--About section-->
-        <div class="Row" id="About">
-            <!--Left column-->
-            <div class="Column_2">
-                <img src="images/coding_image_1.jpg" alt="imagge of mobile phone screen mail app">
+        <!-- Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/HTML_5.JPG" alt="HTML 5 logo">
+                        <div class="text">Ready to help you with your next project.</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/CSS_logo.jpeg" alt="CSS logo"> 
+                        <div class="text">I am a front-end web developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/JS_logo.png" alt="JavaScript logo">
+                        <div class="text">JavaScript</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Python_logo.png" alt="Python_logo">
+                        <div class="text">Python programming</div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/SQL_logo.png" alt="SQL logo"> 
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Contact_Me.jpg" alt="Picture of laptop screen"> 
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
             </div>
-            <!--Right column-->
+        </div>
+
+        <!-- About section -->
+        <div class="Row" id="About">
+            <!-- Left column -->
+            <div class="Column_2">
+                <img src="images/contact_image.jpg" alt="image of mobile phone screen mail app">
+            </div>
+            <!-- Right column -->
             <div class="Column_1">
                 <h1>About Me</h1>
                 <p>
                     I am software developer based in the South East of England, who is knowledgable and experinced in the following: HTML, CSS and Javascript.
                     <br>
-                    <br>I am quick learner and confortable with picking up new skills to get the job done.
+                    <br>I am quick learner and comfortable with picking up new skills to get the job done.
                     <br>
-                    <br>Aside from being passionate about coding, in my spare time I enjoy cooking, watching football and listening to music.
+                    <br>Aside from being passionate about coding, in my spare time I enjoy cooking, watching football and listening to music. <a onclick="openForm()" class="contact">Contact</a> me below!
                 </p>
             </div>
         </div>
 
-        <!--GitHub section-->
+        <!-- GitHub section -->
         <div class="Row" id="GitHub">
-            <!--Left column-->
+            <!-- Left column -->
             <div class="Column_1">
                 <h1>My GitHub</h1>
-                <p>
-                    You can view my current and past coding projects on my Github profile by click on the link below.
+                <p>You can view my current and past coding projects on my Github profile by click on the link below.
                     <br>
                     <p class="center"><a href="https://github.com/shubyone" target="_blank">Abdul Malik Github</a></p>
                 </p>
             </div>
-            <!--Right column-->
+            <!-- Right column -->
             <div class="Column_2">
-                <a href="https://github.com/the-tech-academy" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+                <a href="https://github.com/shubyone" target="_blank"><img src="images/GitHub.png"></a>
             </div>
         </div>
 
-        <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="images/contact_image.jpg"Contact_Image">
-            </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact Me</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="https://formspree.io/f/mgegbqkb" method="POST"> 
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+        <!-- Contact form -->
+        <div id="Contact">
+           <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+           <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/mgegbqkb" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>		
+                      <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                      <input type="text" placeholder="Type your message here" name="message">
+         
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
-            </div>
+           </div>
         </div>
-
-        <!--Footer section-->
+        
+        <!-- Footer section -->
         <footer>
-            <p>
-                <p class="center">&copy Abdul Malik 2024</p>
-                <br>
-            </p>
+            <p class="center">&copy Abdul Malik 2024</p>
         </footer>
+        <script src="JS/portfolio.js"></script>
     </body>
 </html>
